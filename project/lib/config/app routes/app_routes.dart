@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:random_qoutes/features/random_qoutes/presentation/logic/cubit/random_qoutes_cubit.dart';
 import 'package:random_qoutes/features/random_qoutes/presentation/screeens/favourite_qoute_screen.dart';
 import 'package:random_qoutes/features/random_qoutes/presentation/screeens/qoute_home.dart';
+import 'package:random_qoutes/injection.dart' as di;
 
 class Routes {
   static const String qouteHome = '/';
@@ -17,7 +20,10 @@ class AppRoutes {
     switch (routeSettings.name) {
       case Routes.qouteHome:
         return MaterialPageRoute(
-          builder: (context) => const QouteHomeScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => di.sl<RandomQoutesCubit>(),
+            child: const QouteHomeScreen(),
+          ),
         );
       case Routes.favouriteQoute:
         return MaterialPageRoute(

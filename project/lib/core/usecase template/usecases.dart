@@ -13,3 +13,7 @@ abstract class NoParamters extends Equatable{
   @override
   List<Object> get props => [];
 }
+
+class NoParams extends NoParamters{
+  
+}

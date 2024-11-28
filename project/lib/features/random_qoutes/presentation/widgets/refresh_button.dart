@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class RefreshButton extends StatelessWidget {
-  void refreshQoute() {}
-  const RefreshButton({super.key, required refreshQoute});
+  final VoidCallback refreshQoute;
+  const RefreshButton({super.key, required this.refreshQoute, });
 
   @override
   Widget build(BuildContext context) {
