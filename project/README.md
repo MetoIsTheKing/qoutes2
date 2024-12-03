@@ -1,8 +1,8 @@
 # project
 
-A new Flutter project.
+A new Flutter project for testing.
 
-## Getting Started
+## Getting Started Here we go
 
 This project is a starting point for a Flutter application.
 
